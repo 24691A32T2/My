@@ -1,0 +1,7 @@
+week  15
+FROM alpine:latest
+RUN apk add --no-cache nano
+CMD ["/bin/sh"]
+docker build -t alpine-nano .
+docker run -it alpine-nano
+nano test.txt
