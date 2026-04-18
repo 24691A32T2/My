@@ -1,0 +1,17 @@
+save it as index.html
+<!DOCTYPE html>
+	<html>
+	<head>
+	    <title>Hello, World!</title>
+	</head>
+	<body>
+	    <h1>Hello, World!</h1>
+	</body>
+	</html>
+save it as Dockerfile
+FROM nginx:latest
+COPY index.html /usr/share/nginx/html/index.html
+EXPOSE 80
+commands to be executed:
+docker build -t my-html-app .
+docker run -d -p 8080:80 my-html-app
